@@ -1,6 +1,0 @@
-def catalog_finder(url_list):
-    for elem in url_list:
-        if '/catalog/' in elem:
-            result_list = [elem]
-    return result_list
-catalog_finder(url_list=['https//:qweqwe/catalog/', 'http//:qwertyuuytg'])

@@ -1,0 +1,62 @@
+def catalog_finder(url_list):
+    for elem in url_list:
+        if '/catalog/' in elem:
+            result_list = [elem]
+    return result_list
+    
+    
+a = catalog_finder(url_list=['https//:qweqwe/catalog/', 'http//:qwertyuuytg'])
+print(a)
+
+
+def get_str_center(input_str):
+    if len(input_str) %2 == 0:
+        output_str = input_str[int(len(input_str)/2):int(len(input_str)/2 + 2)]
+    else:
+        output_str = input_str[int(len(input_str)/2):int(len(input_str)/2 + 3)]
+    return output_str
+
+
+b = get_str_center(input_str=input())
+print(b)
+
+
+def count_symbols(input_str):
+    """
+    Дописать функцию, которая считает сколько раз каждая из букв
+    встречается в строке, разложить буквы в словарь парами
+    {буква:количество упоминаний в строке}
+    """
+
+    output_dict = {elem:input_str.count(elem) for elem in set(input_str)}
+    return output_dict
+
+c = count_symbols(input_str=input())
+print(c)
+
+
+def mix_strings(str1, str2):
+    """
+    Дописать функцию, которая будет принимать 2 строки и вставлять вторую
+    в середину первой
+    """
+    result_str = str1[:int(len(str1))//2] + str2 + str1[int(len(str1))//2:]
+    return result_str
+
+d = mix_strings(str1=input(), str2=input())
+print(d)
+
+
+def even_int_generator():
+    """
+    Сгенерировать список из диапазона чисел от 0 до 100 и записать
+    в результирующий список только четные числа.
+    """
+    even_int_list = []
+    for elem in range(0, 101, 2):
+        even_int_list.append(elem)
+    return even_int_list
+
+
+e = even_int_generator()
+print(e)
